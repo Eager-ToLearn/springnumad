@@ -20,9 +20,17 @@ public class CarInfo {
 	
 	@Column(nullable = false, unique = true)
 	private String email;
+	
+	@Column(nullable = false)
 	private long CellNo;
+	
+	@Column(nullable = false)
 	private String Brand;
+	
+	@Column(nullable = false)
 	private String CarModel;
+	
+	
 	private Year MakeYear;
 	public CarInfo() {
 		super();
@@ -31,12 +39,12 @@ public class CarInfo {
 	public CarInfo(int carId, String owner, String email, long cellNo, String brand, String carModel, Year makeYear) {
 		super();
 		this.carId = carId;
-		Owner = owner;
+		this.Owner = owner;
 		this.email = email;
-		CellNo = cellNo;
-		Brand = brand;
-		CarModel = carModel;
-		MakeYear = makeYear;
+		this.CellNo = cellNo;
+		this.Brand = brand;
+		this.CarModel = carModel;
+		this.MakeYear = makeYear;
 	}
 	public int getCarId() {
 		return carId;
@@ -82,9 +90,11 @@ public class CarInfo {
 	}
 	@Override
 	public String toString() {
-		return "CarReg [carId=" + carId + ", Owner=" + Owner + ", email=" + email + ", CellNo=" + CellNo + ", Brand="
+		return "CarInfo [carId=" + carId + ", Owner=" + Owner + ", email=" + email + ", CellNo=" + CellNo + ", Brand="
 				+ Brand + ", CarModel=" + CarModel + ", MakeYear=" + MakeYear + "]";
 	}
+	
+	
 	
 	
 	
