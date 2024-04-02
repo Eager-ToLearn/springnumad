@@ -9,7 +9,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity(name="Car Info")
-public class CarReg {
+public class CarInfo {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -24,11 +24,11 @@ public class CarReg {
 	private String Brand;
 	private String CarModel;
 	private Year MakeYear;
-	public CarReg() {
+	public CarInfo() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public CarReg(int carId, String owner, String email, long cellNo, String brand, String carModel, Year makeYear) {
+	public CarInfo(int carId, String owner, String email, long cellNo, String brand, String carModel, Year makeYear) {
 		super();
 		this.carId = carId;
 		Owner = owner;
