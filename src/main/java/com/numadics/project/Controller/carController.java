@@ -15,17 +15,18 @@ public class carController {
 	@Autowired
 	private CarInfoService carInfoService;
 	
-	@GetMapping("/")
-	public String Home()
-	{
-		return "index";
-	}
+//	@GetMapping("/")
+//	public String Home()
+//	{
+//		return "index";
+//	}
 	
 	@PostMapping("/carReg")
-	public CarInfo RegisterCar(@RequestBody CarInfo carInfo)
+	public void RegisterCar(@RequestBody CarInfo cinfo)
 	{
-		CarInfo carInfo1 = carInfoService.RegisterCar(carInfo);
-		return carInfo1;
+		carInfoService.RegisterCar(cinfo);
+//		CarInfo carInfo1 = carInfoService.RegisterCar(carInfo);
+//		return carInfo;
 	}
 
 }

@@ -15,7 +15,7 @@ public class CarInfo {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int carId;
 	
-	@Column(nullable = false)
+	//@Column(nullable = false)
 	private String Owner;
 	
 	@Column(nullable = false, unique = true)
@@ -24,10 +24,10 @@ public class CarInfo {
 	@Column(nullable = false)
 	private long CellNo;
 	
-	@Column(nullable = false)
+	//@Column(nullable = false)
 	private String Brand;
 	
-	@Column(nullable = false)
+	//@Column(nullable = false)
 	private String CarModel;
 	
 	
@@ -56,7 +56,7 @@ public class CarInfo {
 		return Owner;
 	}
 	public void setOwner(String owner) {
-		Owner = owner;
+		this.Owner = owner;
 	}
 	public String getEmail() {
 		return email;
@@ -68,25 +68,25 @@ public class CarInfo {
 		return CellNo;
 	}
 	public void setCellNo(long cellNo) {
-		CellNo = cellNo;
+		this.CellNo = cellNo;
 	}
 	public String getBrand() {
 		return Brand;
 	}
 	public void setBrand(String brand) {
-		Brand = brand;
+		this.Brand = brand;
 	}
 	public String getCarModel() {
 		return CarModel;
 	}
 	public void setCarModel(String carModel) {
-		CarModel = carModel;
+		this.CarModel = carModel;
 	}
 	public Year getMakeYear() {
 		return MakeYear;
 	}
 	public void setMakeYear(Year makeYear) {
-		MakeYear = makeYear;
+		this.MakeYear = makeYear;
 	}
 	@Override
 	public String toString() {

@@ -12,13 +12,17 @@ public class CarInfoService {
 	@Autowired
 	private CarInfoRepo carInfoRepo;
 
-	public CarInfo RegisterCar(CarInfo carInfo) {
+//	public CarInfo RegisterCar(CarInfo carInfo) {
+//		
+//		CarInfo carInfo1 = carInfoRepo.save(carInfo);
+//		
+//		return carInfo1;
+//	}
 		
-		CarInfo carInfo1 = carInfoRepo.save(carInfo);
+		public void RegisterCar(CarInfo cinfo)
+		{
+			carInfoRepo.save(cinfo);
+			
+		}
 		
-		return carInfo1;
-		
-		
-	}
-
 }
